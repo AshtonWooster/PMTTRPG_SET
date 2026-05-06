@@ -1012,4 +1012,306 @@ If a character receives a One-Sided Attack (where only the attacker rolls, wheth
 
 For example, if someone had Inflict Burn on Clash Win, they would inflict Burn on One-Sided Attacks.
 
+### Damage and Injury
+#### Damage Calculations
 
+When a Melee Attack or Ranged Attack Action hits the target, they start the Damage Calculation, using the Final Result of the Attack and the Resistances of the Outfit:
+
+**HP DMG**
+`([Final Result] x [Outfit HP Resistance of DMG Type]) + After Resistance HP DMG`
+
+**ST DMG**
+`([Final Result] x [Outfit ST Resistance of DMG Type]) + After Resistance ST DMG`
+
+HP DMG and ST DMG are calculated separately. Once calculated, reduce your HP or ST equal to the calculated damage. The minimum ST and HP you can have is 0, if an attack would drop a character’s values below that, they stop at 0.
+
+Effects that depend on the Clash Result, such as Regen, occur *after* Damage Calculation, Effects that affect DMG Calculation, like Bursting Rupture or Tremor, are applied in Damage Calculation.
+
+#### Staggered and Stagger Threshold
+
+A character normally takes ST DMG during combat, stunning and exposing them.
+
+When a Character reaches 0 in their Stagger Threshold they are ***Staggered* until the *end* of the *Next* Round**. This applies no matter how early into the Current Round the character becomes staggered. 
+
+While under the effect of the Staggered Condition, the character reduces all their Outfit Resistances to *Fatal* [`x2`] and they reduce all their Movement, Actions and Reactions to `0` until they start a round without the Staggered Condition.
+
+When a character is Staggered, they suffer `5` SP DMG and recover `1` Light.
+
+When the end of the Next Round is reached and the round after that begins, the Staggered character immediately recovers from stagger, regains their reactions, and continues through the regular turn order. They also gain an additional `+10` Stagger over their original threshold, which goes away at the end of combat if any remains.
+
+Additionally, Staggered characters are easier to Grapple, and the GM should consider that they are more exposed in general for other kinds of maneuvers as applicable.
+
+#### Bleed Out, Scarred Condition and Dying
+
+While a grave wound may render a character unable to continue fighting, death is not so quick to claim them. When a character reaches `0` HP, they are considered out of combat–  they clear all statuses on themself and enter a Bleed Out state.
+
+**Bleed Out**
+
+Upon entering a Bleed Out state, the character has `3` rounds to be stabilized (progressing at the end of the round). There following actions stabilize characters in Bleed Out:
+- Reaching the end of combat.
+- Healing to the character in a Bleed Out, be it with a Medkit or otherwise. Out of combat healing cannot be used for this purpose. The character performing the healing must be adjacent to the character in the Bleed Out state.
+- Performing a Prudence check on the target, requiring a Success. The character performing the Prudence check must be adjacent to the character in the Bleed Out state.
+
+
+A stabilized character remains out of combat. If they are healed to `25%` of their max HP, they may get up and re-enter combat, regaining full stagger and rejoining the turn order with their original initiative.
+At the end of combat, if a character was stabilized through methods other than healing, they return to having `25%` of their maximum HP.
+If the character is not stabilized by the end of the `3rd` round, they become Scarred.
+
+**Scarred**
+
+When a character becomes Scarred, this means they cannot afford to suffer additional stress to their body. If a Scarred character would become Scarred again, they instead die immediately.
+
+A character can’t normally recover from being Scarred, but if they buy a Backup Body, this new body starts unscarred, even if it is modeled after the Scarred person.
+
+**Brutality**
+
+For especially cruel conflicts, combatants may wish to ensure that a downed character is properly finished off. 
+
+Using this rule, characters that are in Bleed Out are not considered out of combat until stabilized, and can be attacked as normal. An attack against a character in Bleed Out automatically succeeds unless intercepted, and reduces the timer on their Bleed Out by one round.
+
+**Sacrificial Injury (Limb Loss)**
+
+Even those brought to the brink will sometimes have the strength to push forward– but not without sacrifice. 
+
+A character may elect, upon taking damage that would reduce their HP to `0`, to nullify that damage (and if this was during a clash, any effects taken) entirely, at the cost of losing one of their limbs in the process. The limb is chosen by the user, between one of their arms or legs.
+
+Upon experiencing Limb Loss, you suffer Disadvantage to all Challenges that require the use of that limb to be performed properly. Recovering a Limb costs `200k ₳`.
+
+If you lose an arm, you lose the capacity to use that hand. If you lose a leg, you reduce your base movement by `3` SQRs. A character suffering arm Limb Loss may wield a two-handed weapon with one hand, but they suffer Disadvantage while doing so.
+
+A character without arms can’t use weapons or tools, a character without legs can only move with the Dash Action unless they have Haste or similar effects.
+
+### Panic and Sanity
+
+PCs are exposed to SP DMG by the different sources of stress they experience.
+
+Characters can lose SP from:
+- **Pressure**: When entering lethal combat against opponents of higher Rank, you take `5` SP DMG for each Rank of difference between you and the highest Rank enemy.
+- **Getting Staggered**: When your ST is reduced to `0`, you take `5` SP DMG. 
+- **Bleed Out (Ally)**: When one of your allies has their HP reduced to `0`, you take `5` SP DMG for each Rank of difference between you and your ally, with their Rank being treated as `1` higher for this purpose.
+- **Pushing Limits**: Up to Prudence times per combat, if you do not have the requisite Light to use a Skill, you may consume SP at a rate of `5` per Light replaced in order to use the skill. You may consume SP even if this would push you into Panic, but only to the next Light that would be available. 
+(ex: if you have 8 SP, this may be used for at most 2 Light)
+- **Other Stressors**: Within GM discretion, certain environments and encounters can cause mental harm even outside of combat. Don’t be afraid to mess around with Sanity damage if characters seem too comfortable.
+
+Characters can gain SP from:
+- **Enemy Takedown**: When downing an enemy, you regain `3` SP.
+- **Combat End**: When ending combat, you regain `5+Prudence` SP.
+- **Unpanicking**: When coming out of a Panic state, you regain `15` SP.
+If this was caused due to an “immediate unpanic”, as detailed in the Panic types, regain only `10` SP.
+- **Unpanicking an Ally**: When succeeding on a check to Unpanic an Ally, you regain `3` SP for each Rank of difference between you and your ally, with their Rank being treated as `1` higher for this purpose.
+
+For any Rank difference calculations, assume any differences that would result in a negative number will instead just have no effect; ie: you do not gain Sanity from a lower Rank ally going into Bleed Out.
+
+When a Character hits `0` SP, they begin to Panic. Unless caused by the Sinking status effect, they roll a `1d4`, and the Panic type matching the result of that roll is applied to them. 
+
+While Panicking, a character cannot use Skills. Other forms of SP regen/gain will not bring them out of Panic, except for Combat End.
+
+Characters can be unpanicked via another character making a Prudence Challenge Roll with a penalty of the panicking Character’s Rank, taking them out of Panic on a Success. Partial Success does not unpanic the character, but does grant a `+1` to all following attempts, additive with any other Partial Successes.
+If the panicked target reaches an amount of negative SP equal to 50% their max SP or the Goading Strike skill effect is applied, this Panic is enhanced, allowing the user to control the behavior of the target. The unit who caused the SP loss or used the skill will be referred to as the ‘Provoker’ for this table.
+
+| 1d4 Result | Panic Behavior | Goaded Panic Behavior |
+| ----------- | ----------- | ----------- |
+| 1 (Fight) | On their turn, the Character must move adjacent to the nearest Target and use their Action(s) to Attack the nearest available Target, including allies. If there are multiple Targets the same distance away from the Character, the Target is chosen at random. When this Character takes down a Target, immediately unpanic. | The Character can be forced to Attack a specific Target by the Provoker. |
+| 2 (Flight) | On their turn, the Character must use the Disengage Action and move as far away as they can from any enemies. If the furthest they can move takes them through a hazard, they must move through it. If they have any additional Actions, they must use them to Dash and increase their movement. When this Character ends their turn `9` SQRs away from any other Targets (including allies), immediately unpanic. | The Character can be forced to move in a specific direction by the Provoker. This doesn’t specify complicated directions, but simple linear orders like ‘go north’, ‘go to that wall’, or ‘go away’. |
+| 3 (Fawn) | On their turn, the Character must move adjacent to the nearest Target (chosen at random between nearest available Targets) and take the Protect Action. If they have any additional Actions, they must convert them into Reactions. While Protecting, the Character must intercept clashes for any Target within range, including enemies. When this Character recovers from being Staggered, immediately unpanic. | The Character can be forced to use the Protect Action on a specific Target by the Provoker. |
+| 4 (Freeze) | On their turn, the Character must convert their Action(s) into Reactions. They cannot use their movement action. They cannot use the Opportunity Attack Reaction. When the Character ends their third turn under this effect, immediately unpanic. | The type (Counter, Block or Evade) of the first N reactions the Character uses are selected by the Provoker. N is equal to the Provoker’s Rank. |
+
+### Recovering and Healing
+
+After combat, characters normally will try to recover from their wounds and fears.
+
+When a combat ends, characters recover all their Stagger Threshold, Light equal to `Rank`, and [`5+Prudence`] Sanity.
+
+Characters can also rest one hour to recover based on their Rank and Stats:
+
+| Attribute | Recovery |
+| ----------- | ----------- |
+| Health Points | `25 + [Fortitude*3] + [Rank*3]` |
+| Sanity Points | `3+Prudence` |
+| Light | `Rank` |
+
+Characters can rest multiple hours, recovering these amounts each hour of resting.
+
+## Act 7: Economy
+The currency used in the City is called ‘Ahn’.
+
+Ahn will be controlled in groups of “k”, 1 k represents 1,000 Ahn. No important or relevant product will be under 1,000 Ahn or wouldn’t have a price divisible by 1,000 Ahn.
+
+Characters earn Ahn by completing jobs and use that Ahn for purchasing the Equipment they use on their missions.
+
+**Consideration: About Averages**
+The term “Average” will be used a lot on the following tables. This is to represent the line where most prices will be. Game Masters can and will change these prices, but price changes shouldn't deviate more than 25% from the original price, unless the piece of Equipment is exceptional or famous.
+
+### Weapons, Outfits, and Tools
+While most combatants in The City normally move with only a couple of weapons, they still need to buy that new equipment or upgrade their old ones, whether having new interests or trying to expand their options.
+
+#### Buying Equipment
+Weapons, Outfits and custom Tools are all bought following the prices in the next table.
+
+**Ammunition**, **Explosives** and **Market tools** are present in the Item List with their own prices.
+
+**Average cost of Equipment**
+
+| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `50k ₳` | `200k ₳` | `1,000k ₳` | `2,000k ₳` | `6,000k ₳` | `20,000k ₳` | `40,000k ₳` | `80,000k ₳` |
+| Outfit | `100k ₳` | `250k ₳` | `1,200k ₳` | `2,400k ₳` | `7,200k ₳` | `25,000k ₳` | `50,000k ₳` | `75,000k ₳` |
+| C. Tool | `20k ₳` | `50k ₳` | `250k ₳` | `500k ₳` | `1,500k ₳` | `5,000k ₳` | `10,000k ₳` | `20,000k ₳` |
+| R. Tool | `100k ₳` | `250k ₳` | `1,250k ₳` | `2,500k ₳` | `7,500k ₳` | `25,000k ₳` | `50,000k ₳` | `90,000k ₳` |
+
+#### Upgrading Equipment
+Upgrading equipment is a normal tendency between Fixers, especially those that have commissioned a custom weapon, outfit or augment. 
+
+Upgrading equipment is a linear process, there is no way of upgrading a Rank 1 Weapon to Rank 3 without paying for the Rank 2 Upgrade first. All equipment follows the next table when upgrading, use the price of the Rank you want to obtain [if you are upgrading from Rank 1 to Rank 2, you use the Rank 2 column].
+
+When upgrading equipment, you may use the new EP and any unused EP from a prior rank to:
+- Take new Positive Effects. (Ex: Spending 3 EP to gain Haste 1)
+- Increase already present Positive Effects. (Ex: Spending 4 EP to increase Inflict Burn 2 to 4)
+- Change any already present and new Negative Effects freely.
+
+As a rule of thumb, all already present positive effects are "locked in" on a piece of equipment when upgrading, while already present negative effects can be changed. Any other EP is fair game to be used as the player chooses.
+
+When upgrading equipment, you may freely change the Clash Win/Clash Lose conditions of the present effects. 
+When upgrading Outfits, any Outfit Resistances are based off of the Resistances for the Rank for purposes of Resistance Trading, and may be completely different from the preexisting Resistances before upgrade.
+
+**Average cost of Upgrading Equipment**
+
+| Type | To Rank 0 | To Rank 1 | To Rank 2 | To Rank 3 | To Rank 4 | To Rank 5 | To Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `120k ₳` | `650k ₳` | `1,400k ₳` | `4,500k ₳` | `16,000k ₳` | `34,000k ₳` | `50,000k ₳` |
+| Outfit | `150k ₳` | `780k ₳` | `1,680k ₳` | `5,400k ₳` | `20,000k ₳` | `42,500k ₳` | `75,000k ₳` |
+
+#### Repairing Equipment
+
+Broken equipment, whether from unfortunate happenstance or looting the dead, can be repaired for about half the cost of its normal purchasing price.
+
+**Average cost of Repairing Damaged Equipment**
+
+| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `25k ₳` | `100k ₳` | `500k ₳` | `1,000k ₳` | `3,000k ₳` | `10,000k ₳` | `20,000k ₳` | `40,000k ₳` |
+| Outfit | `50k ₳` | `125k ₳` | `600k ₳` | `1,200k ₳` | `3,600k ₳` | `12,500k ₳` | `25,000k ₳` | `50,000k ₳` |
+
+#### Looting the Dead and Damaged Equipment
+
+When looting Weapons or Outfits of NPCs, their Equipment is always considered **Damaged**.
+
+**Damaged** equipment only has Negative Effects active when used. Repairing a piece of Equipment costs half the amount of Ahn that it would take to buy a piece of equipment of the same Rank.
+
+Ammunition and Tools can’t be **Damaged** and can be looted without problems.
+Augments can’t be looted at all.
+
+### Augments and Back Up Bodies
+Characters modify themselves constantly in The City, with aesthetic but also combat capable prosthetics that allow them to work correctly.
+
+#### Augments
+As informed in the Effect and Skills chapter, Augments are bought not as Equipment, but individually based on the Effect.
+Installing, training or being implanted negatively or positively costs Ahn, as even negatives give you the opportunity to implant *more* positives. These amounts scale according to how many Augment points are already installed at the time of the purchase, counting Positive points and Negative points separately.
+
+| Positives | 0-8 Pts. | 9-16 Pts. | 17-24 Pts. | 25-32 Pts. | 33-40 Pts. | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| **Install** 1 Positive Point | `250k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,250k ₳` |
+| **Uninstall** 1 Positive Point | `125k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `625k ₳` |
+
+| Negatives | 0-4 Pts. | 5-8 Pts. | 9-12 Pts. | 13-16 Pts. | 17-20 Pts. | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| **Install** 1 Negative Point | `125k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `625k ₳` |
+| **Uninstall** 1 Negative Point | `62k ₳` | `125k ₳` | `187k ₳` | `250k ₳` | `312k ₳` |
+
+Take into account these prices are for point, buying +1 Inflict Burn in the 9-16 Point Range, for example, has a total cost of 1,000k ₳ (500k*2) because the effect itself has a cost of 2 Points.
+
+These costs do not apply for purchasing Combat Parts or Specialized Parts, which are augments that act as installed weapons or tools, respectively. 
+
+Those instead use the following table, and a few extra rules:
+- The formula for point cost for Combat or Specialized Parts are as follows:
+  - *Combat Parts*: `2*Rank` Augment Points, where Rank is the Rank of the installed weapon
+  - *Specialized Parts*: `2*Rank` Augment Points, where Rank is the Rank of the installed tool (This tool is considered Reusable)
+- Instead of purchasing the appropriate amount of points, Combat and Specialized Parts follow the below table, scaling as a discount off of normal weapon and tool prices.
+- There is no cost paid when uninstalling a Combat or Specialized Part, but those points are considered null and must be repurchased for use in generalized effects using the table above. Replacement with another Combat or Specialized Part follows the below table as normal.
+- Combat Parts can be upgraded like normal weapons, following normal weapon upgrade rules, following the below table for cost.
+- Combat Parts and Specialized Parts both still follow normal rules for handedness in terms of wielding the specified item but cannot be disarmed from the user. Handedness is determined on acquisition of the Part and cannot be changed without uninstalling.
+
+| Procedure | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| **Combat Part** | `750k ₳` | `1,500k ₳` | `4,500k ₳` | `15,000k ₳` | `30,000k ₳` |
+| **Combat Part Upgrade from Prior Rank** | N/A | `562k ₳` | `2,250k ₳` | `11,250k ₳` | `22,500k ₳` |
+| **Specialized Part** | `625k ₳` | `1,250k ₳` | `3,750k ₳` | `12,500k ₳` | `25,000k ₳` |
+
+**Replacement Parts**
+
+If you lose a Limb for any reason (typically mutilation), you can recover the Limb by paying an average price of `200k ₳`.
+
+#### Backup Bodies
+
+Death is the end of a person in the City, but nothing stops a clone with the same memory, body, identity, and personality to take their place for the right price.
+
+When purchasing a backup body, it is assumed to come with 1 Outfit and 1 Weapon of the Rank of the Back Up Body. The exact Effects of this Outfit and Weapon only need to be addressed when the character makes use of the Back Up body.
+
+If a character goes to a Backup body of lower Rank, they have the next effects:
+- Your Augment is maintained from your old rank, but you LOCK any points and effects over the capacity of an Augment of the backup body's rank and they are unusable. Once you rank back up, you do not need to repurchase those points in order to make use of your augment.
+- Your skills are completely reset, where you may recreate up to 2 skills of Rank (Minimum 1), and your remaining skills of Rank-1. You gain and change skills as normal on level up.
+
+When buying a Backup body, you need to pay the full price in advance. If you already are in possession of a lower Rank of backup body, you may purchase a higher Rank backup body by paying only the difference in cost between the two.
+
+Average Price of Backup Bodies
+
+| Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| `1,350k ₳` | `6,600k ₳` | `13,200k ₳` | `39,600k ₳` | `135,000k ₳` | `270,000k ₳` |
+
+### Making Money
+
+Normally characters are paid per job in a normal campaign, depending on their negotiations with the client. 
+
+However, it is also common that players may end up taking the broken weapons and outfits of their opponent, and maybe even find stashes of loot ready to sell.
+
+#### Selling Normal Equipment
+
+When you sell equipment in good condition, you gain Ahn based on the next table. 
+
+Rank -1 Equipment is always considered **Damaged** for the purpose of reselling it. 
+
+As a general rule, all non-broken equipment is sold at `25%` of the original price (except Custom Tools).
+
+Custom Tools are always sold at the same price, no matter if they are Consumable or Reusable.
+
+**Average selling price of Equipment**
+| Type | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `50k ₳` | `250k ₳` | `500k ₳` | `1,500k ₳` | `5,000k ₳` | `10,000k ₳` |
+| Outfit | `60k ₳` | `300k ₳` | `600k ₳` | `1,800k ₳` | `6,250k ₳` | `12,500k ₳` |
+| Tool | `12k ₳` | `62k ₳` | `125k ₳` | `375k ₳` | `1,250k ₳` | `2,500k ₳` |
+
+#### Selling DAMAGED Equipment
+
+Very few people buy Damaged Equipment, mostly people wanting to smelt them for materials.
+
+**Average selling price of Damaged Equipment**
+
+| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `2k ₳` | `8k ₳` | `40k ₳` | `80k ₳` | `240k ₳` | `800k ₳` | `1,500k ₳` |
+| Outfit | `4k ₳` | `10k ₳` | `48k ₳` | `96k ₳` | `288k ₳` | `1,000k ₳` | `2,000k ₳` |
+
+## Credits
+- **altidiya**: Member of the CR 2.0 Dev Team.
+- **arbitrary_crow_execution**: Member of the CR 2.0/3.0 Dev Team.
+- **beautifuldemise**: Member of the CR 3.0 Dev Team and Roll20 Sheet Dev.
+- **blossomingcrow**: Member of the CR 3.0 Dev Team.
+- **chromaticmuse**: Member of the CR 1.0 Dev Team.
+- **cowts**: Member of the CR 1.0/2.0 Dev Team, creator of the Google Sheet Version English to 1.3.
+- **derpete**: Member of the CR 1.0 Dev Team.
+- **enzo1770**: Member CR 1.0/2.0 Dev Team.
+- **fetlach**: Designer of the Community Rulebook logo.
+- **helloing0119**: Original creator of the Korean Rulebook 
+- **kreif**: Member of the CR 2.0/3.0 Dev Team.
+- **mori____**: Member of the CR 2.0/3.0 Dev Team.
+- **nonamerce**: Member of the CR 3.0 Dev Team.
+- **punibird**: Translator from Korean to English of the Rulebook and Roll20 Sheet Dev
+- **saviorgaming**: Member of the CR 2.0/3.0 Dev Team.
+- **suleiman02**: Member of the CR 3.0 Dev Team.
+- **sky______**: Member of the CR 3.0 Dev Team.
+- **snarkmcclark**: Member of the CR 2.0/3.0 Dev Team.
+- **xiaqia**: Member of the CR 2.0/3.0 Dev Team.
+- **zetsubots**: Member of the CR 3.0 Dev Team.
+- **.kiibo**: Member of the CR 3.0 Dev Team.
