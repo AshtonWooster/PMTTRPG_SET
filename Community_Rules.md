@@ -347,7 +347,7 @@ Some Form Properties are exclusive to Combat Parts, a type of weapon that can be
 
 **MELEE WEAPON FORM PROPERTIES**
 - **Small:**
-    > `+1` Counter Reaction you must do with this weapon (stackable)
+    > `+1` Dice Max on evade
 
 - **Medium:**
     > `+2` Dice Max
@@ -357,7 +357,7 @@ Some Form Properties are exclusive to Combat Parts, a type of weapon that can be
     > `+1` to your Throwing Range with this weapon.
 
 - **Sturdy:**
-    > `+1` Block Reaction (stackable)
+    > `+1` Dice Max on block
 
 - **Hybrid:**
     > You can choose to make either a Melee or Ranged Attack with this weapon, decided before the clash is rolled.
