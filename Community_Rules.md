@@ -75,10 +75,10 @@ Character Rank determines Action Economy of the character by the following table
 | 0 | `1` | `0` |
 | 1 | `1` | `1` |
 | 2 | `1` | `2` |
-| 3 | `2` | `3` |
-| 4 | `2` | `4` |
-| 5 | `3` | `5` |
-| EX | `3` | `6` |
+| 3 | `2` | `2` |
+| 4 | `2` | `3` |
+| 5 | `3` | `3` |
+| EX | `3` | `4` |
 
 ### Character Creation
 Before filling the rest of your sheet, it is advised that you talk with your GM about the expectations & desires, of not only the game, but the rest of the players at the table. 
