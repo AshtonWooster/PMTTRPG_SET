@@ -740,9 +740,9 @@ Movement can only be used during the Character’s Turns. Unless altered for som
 
 **Tactical Movement:**
 
-You can move up to `6` SQRs in any direction that isn’t interrupted by obstacles.
+You can move up to [`3 + [Justice/2] Rounded Down`] SQRs in any direction that isn’t interrupted by obstacles.
 
-Movement can be divided during a turn; you can move `3` SQRs > do an Action > move the remaining `3` SQRs.
+Movement can be divided during a turn; you can move `2` SQRs > do an Action > move the remaining `1` SQRs.
 
 If you have Haste, you increase your SQRs by your Haste stacks during that Turn.
 If you have Bind, you decrease your SQRs by your Bind stacks during that Turn.
@@ -912,17 +912,15 @@ When you successfully use the Grappling Action, both you and your target enter t
 - **Grappling Condition (Grappler):**
   - At the start of your turn, use one Universal Reaction to maintain the Grapple.
   - While maintaining the Grapple:
-    > You can move yourself and your target, but each square (SQR) of movement counts as two. Without Haste or other modifiers, you can move up to `3` SQRs with your target.
+    > You can move yourself and your target, but each square (SQR) of movement counts as two. Without Haste or other modifiers, you can move up to `1` SQR with your target.
     > You can spend Actions to reduce your target’s Reactions on a `1:1` ratio. 
     > You may also use the Throwing Action and end the Grapple.
   - If you become Staggered, the Grapple automatically ends.
 - **Grappling Condition (Target):**
   - You lose your Movement Action.
-  - You lose access to the Protect, Dash, and Disengage Actions. 
-    > When using an Attack Action against a target other than the Grappler, it is made with a penalty equal to `Grappler's Fortitude`.
+  - You lose access to all actions and reactions. 
   - You lose access to the Opportunity Attack Reaction.
-    > Reactions have a penalty equal to `Grappler’s Fortitude`, including Counter Reactions against the Grappler.
-  - When attacked, you can choose not to clash (take the attack as normal) and then use your Reaction to try and Break Free with Disadvantage.
+  - When attacked, you can use your Reaction to try and Break Free.
   - You cannot be Grappled by more than one Grappler at a time.
 
 **Break Free (Grappled)**
