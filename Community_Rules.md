@@ -476,7 +476,7 @@ Resistances determine how much HP and ST Damage the character receives once they
 | Fatal | `x2` |
 | Weak | `x1.5` |
 | Normal | `x1` |
-| Endured | `x5` |
+| Endured | `x0.5` |
 | Ineffective | `x0.25` |
 | Immune | `x0` |
 
