@@ -943,6 +943,7 @@ You can use this Action for free if you do it in the same turn you start the Gra
 **Protect**
 
 Your character can use Reactions to defend against attacks on adjacent squares as if they were being attacked. This includes defending against Opportunity Attacks on allies as long as they are still adjacent to you when moving. When protecting, you can only use Defensive Reactions (Evade or Block) to intercept. You can use the Opportunity Attack reaction as normal. This protection lasts until your next turn.
+  - You can use this action at any time to enter a protecting state
 
 **Ready**
 
@@ -954,10 +955,10 @@ If an Attack Action is being readied, it is not eligible for dual-wielding.
 
 **Reduce Status**
 
-Your character reduces negative Status Effects on themself or an adjacent and willing target. You can reduce a total of `[Justice+Rank]*2` Stacks of Status Effects (this is applied individually across all statuses, not the full count per status). If the sum of `Justice+Rank` is `0` or less, you always reduce at least `1` Stack using this action.
+Your character reduces negative Status Effects on themself or an adjacent and willing target. You can reduce a total of `[(Prudence or Temperance)+Rank]*2` Stacks of Status Effects (this is applied individually across all statuses, not the full count per status). 
 
-Only Burn, Frostbite, Bleed and Smoke can be reduced by this Action, but GMs are encouraged to expand this list if homebrew effects that deal direct or indirect DMG to the characters are involved.
-Effects that “pause” or otherwise stop natural reduction of a status, such as Renewed Blaze, Hemorrhage, and Deep Chill, can be reduced at a rate of [`Justice/2`], but no other status effects can be reduced alongside them.
+Only Burn, Frostbite, Bleed, Tremor, Rupture, Sinking, Thorns, and Smoke can be reduced by this Action, but GMs are encouraged to expand this list if homebrew effects that deal direct or indirect DMG to the characters are involved.
+Effects that “pause” or otherwise stop natural reduction of a status, such as Renewed Blaze, Hemorrhage, and Deep Chill, can be reduced at a rate of [`(Prudence or Temperance)/2`], but no other status effects can be reduced alongside them.
 
 This action doesn’t activate any Status Effect that normally activates with Action use, like Bleed.
 
