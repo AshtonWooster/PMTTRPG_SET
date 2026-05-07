@@ -1046,7 +1046,7 @@ While a grave wound may render a character unable to continue fighting, death is
 
 **Bleed Out**
 
-Upon entering a Bleed Out state, the character has `3` rounds to be stabilized (progressing at the end of the round). There following actions stabilize characters in Bleed Out:
+Upon entering a Bleed Out state, the character has `3` rounds, starting with the next round after entering the state, to be stabilized (progressing at the end of the round). There following actions stabilize characters in Bleed Out:
 - Reaching the end of combat.
 - Healing to the character in a Bleed Out, be it with a Medkit or otherwise. Out of combat healing cannot be used for this purpose. The character performing the healing must be adjacent to the character in the Bleed Out state.
 - Performing a Prudence check on the target, requiring a Success. The character performing the Prudence check must be adjacent to the character in the Bleed Out state.
