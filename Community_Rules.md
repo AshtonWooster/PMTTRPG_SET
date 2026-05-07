@@ -1076,7 +1076,7 @@ A character may elect, upon taking damage that would reduce their HP to `0`, to 
 
 Upon experiencing Limb Loss, you suffer Disadvantage to all Challenges that require the use of that limb to be performed properly. Recovering a Limb costs `200k ₳`.
 
-If you lose an arm, you lose the capacity to use that hand. If you lose a leg, you reduce your base movement by `3` SQRs. A character suffering arm Limb Loss may wield a two-handed weapon with one hand, but they suffer Disadvantage while doing so.
+If you lose an arm, you lose the capacity to use that hand. If you lose a leg, you reduce your base movement by `50% rounded down` SQRs. A character suffering arm Limb Loss may wield a two-handed weapon with one hand, but they suffer Disadvantage while doing so.
 
 A character without arms can’t use weapons or tools, a character without legs can only move with the Dash Action unless they have Haste or similar effects.
 
