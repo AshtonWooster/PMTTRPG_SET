@@ -1119,15 +1119,15 @@ If the panicked target reaches an amount of negative SP equal to 50% their max S
 
 After combat, characters normally will try to recover from their wounds and fears.
 
-When a combat ends, characters recover all their Stagger Threshold, Light equal to `Rank`, and [`5+Prudence`] Sanity.
+When a combat ends, characters recover all their Stagger Threshold, Light equal to `Rank`, and [`2+Prudence`] Sanity.
 
 Characters can also rest one hour to recover based on their Rank and Stats:
 
 | Attribute | Recovery |
 | ----------- | ----------- |
-| Health Points | `25 + [Fortitude*3] + [Rank*3]` |
-| Sanity Points | `3+Prudence` |
-| Light | `Rank` |
+| Health Points | `10 + [Fortitude*2] + [Rank*3]` |
+| Sanity Points | `1+Prudence` |
+| Light | `Rank/2` |
 
 Characters can rest multiple hours, recovering these amounts each hour of resting.
 
