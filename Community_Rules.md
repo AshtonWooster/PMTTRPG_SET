@@ -1151,12 +1151,10 @@ Weapons, Outfits and custom Tools are all bought following the prices in the nex
 
 **Average cost of Equipment**
 
-| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Weapon | `50k ₳` | `200k ₳` | `1,000k ₳` | `2,000k ₳` | `6,000k ₳` | `20,000k ₳` | `40,000k ₳` | `80,000k ₳` |
-| Outfit | `100k ₳` | `250k ₳` | `1,200k ₳` | `2,400k ₳` | `7,200k ₳` | `25,000k ₳` | `50,000k ₳` | `75,000k ₳` |
-| C. Tool | `20k ₳` | `50k ₳` | `250k ₳` | `500k ₳` | `1,500k ₳` | `5,000k ₳` | `10,000k ₳` | `20,000k ₳` |
-| R. Tool | `100k ₳` | `250k ₳` | `1,250k ₳` | `2,500k ₳` | `7,500k ₳` | `25,000k ₳` | `50,000k ₳` | `90,000k ₳` |
+| Type | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `200k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,500k ₳` | `2,500k ₳` | `5,000k ₳` |
+| Outfit | `200k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,500k ₳` | `2,500k ₳` | `5,000k ₳` |
 
 #### Upgrading Equipment
 Upgrading equipment is a normal tendency between Fixers, especially those that have commissioned a custom weapon, outfit or augment. 
@@ -1175,8 +1173,8 @@ When upgrading Outfits, any Outfit Resistances are based off of the Resistances 
 
 **Average cost of Upgrading Equipment**
 
-| Type | To Rank 0 | To Rank 1 | To Rank 2 | To Rank 3 | To Rank 4 | To Rank 5 | To Rank EX |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Type | To Rank 1 | To Rank 2 | To Rank 3 | To Rank 4 | To Rank 5 | To Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Weapon | `120k ₳` | `650k ₳` | `1,400k ₳` | `4,500k ₳` | `16,000k ₳` | `34,000k ₳` | `50,000k ₳` |
 | Outfit | `150k ₳` | `780k ₳` | `1,680k ₳` | `5,400k ₳` | `20,000k ₳` | `42,500k ₳` | `75,000k ₳` |
 
@@ -1186,8 +1184,8 @@ Broken equipment, whether from unfortunate happenstance or looting the dead, can
 
 **Average cost of Repairing Damaged Equipment**
 
-| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Type | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Weapon | `25k ₳` | `100k ₳` | `500k ₳` | `1,000k ₳` | `3,000k ₳` | `10,000k ₳` | `20,000k ₳` | `40,000k ₳` |
 | Outfit | `50k ₳` | `125k ₳` | `600k ₳` | `1,200k ₳` | `3,600k ₳` | `12,500k ₳` | `25,000k ₳` | `50,000k ₳` |
 
