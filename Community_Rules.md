@@ -1175,8 +1175,8 @@ When upgrading Outfits, any Outfit Resistances are based off of the Resistances 
 
 | Type | To Rank 1 | To Rank 2 | To Rank 3 | To Rank 4 | To Rank 5 | To Rank EX |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Weapon | `120k ₳` | `650k ₳` | `1,400k ₳` | `4,500k ₳` | `16,000k ₳` | `34,000k ₳` | `50,000k ₳` |
-| Outfit | `150k ₳` | `780k ₳` | `1,680k ₳` | `5,400k ₳` | `20,000k ₳` | `42,500k ₳` | `75,000k ₳` |
+| Weapon | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
+| Outfit | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
 
 #### Repairing Equipment
 
@@ -1186,8 +1186,8 @@ Broken equipment, whether from unfortunate happenstance or looting the dead, can
 
 | Type | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Weapon | `25k ₳` | `100k ₳` | `500k ₳` | `1,000k ₳` | `3,000k ₳` | `10,000k ₳` | `20,000k ₳` | `40,000k ₳` |
-| Outfit | `50k ₳` | `125k ₳` | `600k ₳` | `1,200k ₳` | `3,600k ₳` | `12,500k ₳` | `25,000k ₳` | `50,000k ₳` |
+| Weapon | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
+| Outfit | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
 
 #### Looting the Dead and Damaged Equipment
 
@@ -1207,32 +1207,13 @@ Installing, training or being implanted negatively or positively costs Ahn, as e
 
 | Positives | 0-8 Pts. | 9-16 Pts. | 17-24 Pts. | 25-32 Pts. | 33-40 Pts. | 
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| **Install** 1 Positive Point | `250k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,250k ₳` |
-| **Uninstall** 1 Positive Point | `125k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `625k ₳` |
+| **Install** 1 Positive Point | `25k ₳` | `50k ₳` | `75k ₳` | `100k ₳` | `125k ₳` |
+| **Uninstall** 1 Positive Point |  `12k ₳` | `25k ₳` | `36k ₳` | `50k ₳` | `66k ₳` |
 
 | Negatives | 0-4 Pts. | 5-8 Pts. | 9-12 Pts. | 13-16 Pts. | 17-20 Pts. | 
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| **Install** 1 Negative Point | `125k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `625k ₳` |
-| **Uninstall** 1 Negative Point | `62k ₳` | `125k ₳` | `187k ₳` | `250k ₳` | `312k ₳` |
-
-Take into account these prices are for point, buying +1 Inflict Burn in the 9-16 Point Range, for example, has a total cost of 1,000k ₳ (500k*2) because the effect itself has a cost of 2 Points.
-
-These costs do not apply for purchasing Combat Parts or Specialized Parts, which are augments that act as installed weapons or tools, respectively. 
-
-Those instead use the following table, and a few extra rules:
-- The formula for point cost for Combat or Specialized Parts are as follows:
-  - *Combat Parts*: `2*Rank` Augment Points, where Rank is the Rank of the installed weapon
-  - *Specialized Parts*: `2*Rank` Augment Points, where Rank is the Rank of the installed tool (This tool is considered Reusable)
-- Instead of purchasing the appropriate amount of points, Combat and Specialized Parts follow the below table, scaling as a discount off of normal weapon and tool prices.
-- There is no cost paid when uninstalling a Combat or Specialized Part, but those points are considered null and must be repurchased for use in generalized effects using the table above. Replacement with another Combat or Specialized Part follows the below table as normal.
-- Combat Parts can be upgraded like normal weapons, following normal weapon upgrade rules, following the below table for cost.
-- Combat Parts and Specialized Parts both still follow normal rules for handedness in terms of wielding the specified item but cannot be disarmed from the user. Handedness is determined on acquisition of the Part and cannot be changed without uninstalling.
-
-| Procedure | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| **Combat Part** | `750k ₳` | `1,500k ₳` | `4,500k ₳` | `15,000k ₳` | `30,000k ₳` |
-| **Combat Part Upgrade from Prior Rank** | N/A | `562k ₳` | `2,250k ₳` | `11,250k ₳` | `22,500k ₳` |
-| **Specialized Part** | `625k ₳` | `1,250k ₳` | `3,750k ₳` | `12,500k ₳` | `25,000k ₳` |
+| **Install** 1 Negative Point | `12k ₳` | `25k ₳` | `36k ₳` | `50k ₳` | `66k ₳` |
+| **Uninstall** 1 Negative Point | `12k ₳` | `25k ₳` | `36k ₳` | `50k ₳` | `66k ₳` |
 
 **Replacement Parts**
 
