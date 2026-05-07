@@ -1219,24 +1219,6 @@ Installing, training or being implanted negatively or positively costs Ahn, as e
 
 If you lose a Limb for any reason (typically mutilation), you can recover the Limb by paying an average price of `200k ₳`.
 
-#### Backup Bodies
-
-Death is the end of a person in the City, but nothing stops a clone with the same memory, body, identity, and personality to take their place for the right price.
-
-When purchasing a backup body, it is assumed to come with 1 Outfit and 1 Weapon of the Rank of the Back Up Body. The exact Effects of this Outfit and Weapon only need to be addressed when the character makes use of the Back Up body.
-
-If a character goes to a Backup body of lower Rank, they have the next effects:
-- Your Augment is maintained from your old rank, but you LOCK any points and effects over the capacity of an Augment of the backup body's rank and they are unusable. Once you rank back up, you do not need to repurchase those points in order to make use of your augment.
-- Your skills are completely reset, where you may recreate up to 2 skills of Rank (Minimum 1), and your remaining skills of Rank-1. You gain and change skills as normal on level up.
-
-When buying a Backup body, you need to pay the full price in advance. If you already are in possession of a lower Rank of backup body, you may purchase a higher Rank backup body by paying only the difference in cost between the two.
-
-Average Price of Backup Bodies
-
-| Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| `1,350k ₳` | `6,600k ₳` | `13,200k ₳` | `39,600k ₳` | `135,000k ₳` | `270,000k ₳` |
-
 ### Making Money
 
 Normally characters are paid per job in a normal campaign, depending on their negotiations with the client. 
