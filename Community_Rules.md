@@ -347,7 +347,7 @@ Some Form Properties are exclusive to Combat Parts, a type of weapon that can be
 
 **MELEE WEAPON FORM PROPERTIES**
 - **Small:**
-    > `+1` Counter Reaction you must do with this weapon (stackable)
+    > `+1` Dice Max on evade
 
 - **Medium:**
     > `+2` Dice Max
@@ -357,7 +357,7 @@ Some Form Properties are exclusive to Combat Parts, a type of weapon that can be
     > `+1` to your Throwing Range with this weapon.
 
 - **Sturdy:**
-    > `+1` Block Reaction (stackable)
+    > `+1` Dice Max on block
 
 - **Hybrid:**
     > You can choose to make either a Melee or Ranged Attack with this weapon, decided before the clash is rolled.
@@ -476,7 +476,7 @@ Resistances determine how much HP and ST Damage the character receives once they
 | Fatal | `x2` |
 | Weak | `x1.5` |
 | Normal | `x1` |
-| Endured | `x5` |
+| Endured | `x0.5` |
 | Ineffective | `x0.25` |
 | Immune | `x0` |
 
@@ -740,9 +740,9 @@ Movement can only be used during the Character’s Turns. Unless altered for som
 
 **Tactical Movement:**
 
-You can move up to `6` SQRs in any direction that isn’t interrupted by obstacles.
+You can move up to [`3 + [Justice/2] Rounded Down`] SQRs in any direction that isn’t interrupted by obstacles.
 
-Movement can be divided during a turn; you can move `3` SQRs > do an Action > move the remaining `3` SQRs.
+Movement can be divided during a turn; you can move `2` SQRs > do an Action > move the remaining `1` SQRs.
 
 If you have Haste, you increase your SQRs by your Haste stacks during that Turn.
 If you have Bind, you decrease your SQRs by your Bind stacks during that Turn.
@@ -912,17 +912,15 @@ When you successfully use the Grappling Action, both you and your target enter t
 - **Grappling Condition (Grappler):**
   - At the start of your turn, use one Universal Reaction to maintain the Grapple.
   - While maintaining the Grapple:
-    > You can move yourself and your target, but each square (SQR) of movement counts as two. Without Haste or other modifiers, you can move up to `3` SQRs with your target.
+    > You can move yourself and your target, but each square (SQR) of movement counts as two. Without Haste or other modifiers, you can move up to `1` SQR with your target.
     > You can spend Actions to reduce your target’s Reactions on a `1:1` ratio. 
     > You may also use the Throwing Action and end the Grapple.
   - If you become Staggered, the Grapple automatically ends.
 - **Grappling Condition (Target):**
   - You lose your Movement Action.
-  - You lose access to the Protect, Dash, and Disengage Actions. 
-    > When using an Attack Action against a target other than the Grappler, it is made with a penalty equal to `Grappler's Fortitude`.
+  - You lose access to all actions and reactions. 
   - You lose access to the Opportunity Attack Reaction.
-    > Reactions have a penalty equal to `Grappler’s Fortitude`, including Counter Reactions against the Grappler.
-  - When attacked, you can choose not to clash (take the attack as normal) and then use your Reaction to try and Break Free with Disadvantage.
+  - When attacked, you can use your Reaction to try and Break Free.
   - You cannot be Grappled by more than one Grappler at a time.
 
 **Break Free (Grappled)**
@@ -945,6 +943,7 @@ You can use this Action for free if you do it in the same turn you start the Gra
 **Protect**
 
 Your character can use Reactions to defend against attacks on adjacent squares as if they were being attacked. This includes defending against Opportunity Attacks on allies as long as they are still adjacent to you when moving. When protecting, you can only use Defensive Reactions (Evade or Block) to intercept. You can use the Opportunity Attack reaction as normal. This protection lasts until your next turn.
+  - You can use this action at any time to enter a protecting state
 
 **Ready**
 
@@ -956,10 +955,10 @@ If an Attack Action is being readied, it is not eligible for dual-wielding.
 
 **Reduce Status**
 
-Your character reduces negative Status Effects on themself or an adjacent and willing target. You can reduce a total of `[Justice+Rank]*2` Stacks of Status Effects (this is applied individually across all statuses, not the full count per status). If the sum of `Justice+Rank` is `0` or less, you always reduce at least `1` Stack using this action.
+Your character reduces negative Status Effects on themself or an adjacent and willing target. You can reduce a total of `[(Prudence or Temperance)+Rank]*2` Stacks of Status Effects (this is applied individually across all statuses, not the full count per status). 
 
-Only Burn, Frostbite, Bleed and Smoke can be reduced by this Action, but GMs are encouraged to expand this list if homebrew effects that deal direct or indirect DMG to the characters are involved.
-Effects that “pause” or otherwise stop natural reduction of a status, such as Renewed Blaze, Hemorrhage, and Deep Chill, can be reduced at a rate of [`Justice/2`], but no other status effects can be reduced alongside them.
+Only Burn, Frostbite, Bleed, Tremor, Rupture, Sinking, Thorns, and Smoke can be reduced by this Action, but GMs are encouraged to expand this list if homebrew effects that deal direct or indirect DMG to the characters are involved.
+Effects that “pause” or otherwise stop natural reduction of a status, such as Renewed Blaze, Hemorrhage, and Deep Chill, can be reduced at a rate of [`(Prudence or Temperance)/2`], but no other status effects can be reduced alongside them.
 
 This action doesn’t activate any Status Effect that normally activates with Action use, like Bleed.
 
@@ -1047,7 +1046,7 @@ While a grave wound may render a character unable to continue fighting, death is
 
 **Bleed Out**
 
-Upon entering a Bleed Out state, the character has `3` rounds to be stabilized (progressing at the end of the round). There following actions stabilize characters in Bleed Out:
+Upon entering a Bleed Out state, the character has `3` rounds, starting with the next round after entering the state, to be stabilized (progressing at the end of the round). There following actions stabilize characters in Bleed Out:
 - Reaching the end of combat.
 - Healing to the character in a Bleed Out, be it with a Medkit or otherwise. Out of combat healing cannot be used for this purpose. The character performing the healing must be adjacent to the character in the Bleed Out state.
 - Performing a Prudence check on the target, requiring a Success. The character performing the Prudence check must be adjacent to the character in the Bleed Out state.
@@ -1077,7 +1076,7 @@ A character may elect, upon taking damage that would reduce their HP to `0`, to 
 
 Upon experiencing Limb Loss, you suffer Disadvantage to all Challenges that require the use of that limb to be performed properly. Recovering a Limb costs `200k ₳`.
 
-If you lose an arm, you lose the capacity to use that hand. If you lose a leg, you reduce your base movement by `3` SQRs. A character suffering arm Limb Loss may wield a two-handed weapon with one hand, but they suffer Disadvantage while doing so.
+If you lose an arm, you lose the capacity to use that hand. If you lose a leg, you reduce your base movement by `50% rounded down` SQRs. A character suffering arm Limb Loss may wield a two-handed weapon with one hand, but they suffer Disadvantage while doing so.
 
 A character without arms can’t use weapons or tools, a character without legs can only move with the Dash Action unless they have Haste or similar effects.
 
@@ -1120,15 +1119,15 @@ If the panicked target reaches an amount of negative SP equal to 50% their max S
 
 After combat, characters normally will try to recover from their wounds and fears.
 
-When a combat ends, characters recover all their Stagger Threshold, Light equal to `Rank`, and [`5+Prudence`] Sanity.
+When a combat ends, characters recover all their Stagger Threshold, Light equal to `Rank`, and [`2+Prudence`] Sanity.
 
 Characters can also rest one hour to recover based on their Rank and Stats:
 
 | Attribute | Recovery |
 | ----------- | ----------- |
-| Health Points | `25 + [Fortitude*3] + [Rank*3]` |
-| Sanity Points | `3+Prudence` |
-| Light | `Rank` |
+| Health Points | `10 + [Fortitude*2] + [Rank*3]` |
+| Sanity Points | `1+Prudence` |
+| Light | `Rank/2` |
 
 Characters can rest multiple hours, recovering these amounts each hour of resting.
 
@@ -1152,12 +1151,10 @@ Weapons, Outfits and custom Tools are all bought following the prices in the nex
 
 **Average cost of Equipment**
 
-| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
+| Type | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Weapon | `50k ₳` | `200k ₳` | `1,000k ₳` | `2,000k ₳` | `6,000k ₳` | `20,000k ₳` | `40,000k ₳` | `80,000k ₳` |
-| Outfit | `100k ₳` | `250k ₳` | `1,200k ₳` | `2,400k ₳` | `7,200k ₳` | `25,000k ₳` | `50,000k ₳` | `75,000k ₳` |
-| C. Tool | `20k ₳` | `50k ₳` | `250k ₳` | `500k ₳` | `1,500k ₳` | `5,000k ₳` | `10,000k ₳` | `20,000k ₳` |
-| R. Tool | `100k ₳` | `250k ₳` | `1,250k ₳` | `2,500k ₳` | `7,500k ₳` | `25,000k ₳` | `50,000k ₳` | `90,000k ₳` |
+| Weapon | `200k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,500k ₳` | `2,500k ₳` | `5,000k ₳` |
+| Outfit | `200k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,500k ₳` | `2,500k ₳` | `5,000k ₳` |
 
 #### Upgrading Equipment
 Upgrading equipment is a normal tendency between Fixers, especially those that have commissioned a custom weapon, outfit or augment. 
@@ -1176,10 +1173,10 @@ When upgrading Outfits, any Outfit Resistances are based off of the Resistances 
 
 **Average cost of Upgrading Equipment**
 
-| Type | To Rank 0 | To Rank 1 | To Rank 2 | To Rank 3 | To Rank 4 | To Rank 5 | To Rank EX |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Weapon | `120k ₳` | `650k ₳` | `1,400k ₳` | `4,500k ₳` | `16,000k ₳` | `34,000k ₳` | `50,000k ₳` |
-| Outfit | `150k ₳` | `780k ₳` | `1,680k ₳` | `5,400k ₳` | `20,000k ₳` | `42,500k ₳` | `75,000k ₳` |
+| Type | To Rank 1 | To Rank 2 | To Rank 3 | To Rank 4 | To Rank 5 | To Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
+| Outfit | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
 
 #### Repairing Equipment
 
@@ -1187,10 +1184,10 @@ Broken equipment, whether from unfortunate happenstance or looting the dead, can
 
 **Average cost of Repairing Damaged Equipment**
 
-| Type | Rank -1 | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Weapon | `25k ₳` | `100k ₳` | `500k ₳` | `1,000k ₳` | `3,000k ₳` | `10,000k ₳` | `20,000k ₳` | `40,000k ₳` |
-| Outfit | `50k ₳` | `125k ₳` | `600k ₳` | `1,200k ₳` | `3,600k ₳` | `12,500k ₳` | `25,000k ₳` | `50,000k ₳` |
+| Type | Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | Rank EX |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Weapon | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
+| Outfit | `100k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `750k ₳` | `1,250k ₳` | `2,500k ₳` |
 
 #### Looting the Dead and Damaged Equipment
 
@@ -1210,54 +1207,17 @@ Installing, training or being implanted negatively or positively costs Ahn, as e
 
 | Positives | 0-8 Pts. | 9-16 Pts. | 17-24 Pts. | 25-32 Pts. | 33-40 Pts. | 
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| **Install** 1 Positive Point | `250k ₳` | `500k ₳` | `750k ₳` | `1,000k ₳` | `1,250k ₳` |
-| **Uninstall** 1 Positive Point | `125k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `625k ₳` |
+| **Install** 1 Positive Point | `25k ₳` | `50k ₳` | `75k ₳` | `100k ₳` | `125k ₳` |
+| **Uninstall** 1 Positive Point |  `12k ₳` | `25k ₳` | `36k ₳` | `50k ₳` | `66k ₳` |
 
 | Negatives | 0-4 Pts. | 5-8 Pts. | 9-12 Pts. | 13-16 Pts. | 17-20 Pts. | 
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| **Install** 1 Negative Point | `125k ₳` | `250k ₳` | `375k ₳` | `500k ₳` | `625k ₳` |
-| **Uninstall** 1 Negative Point | `62k ₳` | `125k ₳` | `187k ₳` | `250k ₳` | `312k ₳` |
-
-Take into account these prices are for point, buying +1 Inflict Burn in the 9-16 Point Range, for example, has a total cost of 1,000k ₳ (500k*2) because the effect itself has a cost of 2 Points.
-
-These costs do not apply for purchasing Combat Parts or Specialized Parts, which are augments that act as installed weapons or tools, respectively. 
-
-Those instead use the following table, and a few extra rules:
-- The formula for point cost for Combat or Specialized Parts are as follows:
-  - *Combat Parts*: `2*Rank` Augment Points, where Rank is the Rank of the installed weapon
-  - *Specialized Parts*: `2*Rank` Augment Points, where Rank is the Rank of the installed tool (This tool is considered Reusable)
-- Instead of purchasing the appropriate amount of points, Combat and Specialized Parts follow the below table, scaling as a discount off of normal weapon and tool prices.
-- There is no cost paid when uninstalling a Combat or Specialized Part, but those points are considered null and must be repurchased for use in generalized effects using the table above. Replacement with another Combat or Specialized Part follows the below table as normal.
-- Combat Parts can be upgraded like normal weapons, following normal weapon upgrade rules, following the below table for cost.
-- Combat Parts and Specialized Parts both still follow normal rules for handedness in terms of wielding the specified item but cannot be disarmed from the user. Handedness is determined on acquisition of the Part and cannot be changed without uninstalling.
-
-| Procedure | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| **Combat Part** | `750k ₳` | `1,500k ₳` | `4,500k ₳` | `15,000k ₳` | `30,000k ₳` |
-| **Combat Part Upgrade from Prior Rank** | N/A | `562k ₳` | `2,250k ₳` | `11,250k ₳` | `22,500k ₳` |
-| **Specialized Part** | `625k ₳` | `1,250k ₳` | `3,750k ₳` | `12,500k ₳` | `25,000k ₳` |
+| **Install** 1 Negative Point | `12k ₳` | `25k ₳` | `36k ₳` | `50k ₳` | `66k ₳` |
+| **Uninstall** 1 Negative Point | `12k ₳` | `25k ₳` | `36k ₳` | `50k ₳` | `66k ₳` |
 
 **Replacement Parts**
 
 If you lose a Limb for any reason (typically mutilation), you can recover the Limb by paying an average price of `200k ₳`.
-
-#### Backup Bodies
-
-Death is the end of a person in the City, but nothing stops a clone with the same memory, body, identity, and personality to take their place for the right price.
-
-When purchasing a backup body, it is assumed to come with 1 Outfit and 1 Weapon of the Rank of the Back Up Body. The exact Effects of this Outfit and Weapon only need to be addressed when the character makes use of the Back Up body.
-
-If a character goes to a Backup body of lower Rank, they have the next effects:
-- Your Augment is maintained from your old rank, but you LOCK any points and effects over the capacity of an Augment of the backup body's rank and they are unusable. Once you rank back up, you do not need to repurchase those points in order to make use of your augment.
-- Your skills are completely reset, where you may recreate up to 2 skills of Rank (Minimum 1), and your remaining skills of Rank-1. You gain and change skills as normal on level up.
-
-When buying a Backup body, you need to pay the full price in advance. If you already are in possession of a lower Rank of backup body, you may purchase a higher Rank backup body by paying only the difference in cost between the two.
-
-Average Price of Backup Bodies
-
-| Rank 0 | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Rank 5 | 
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| `1,350k ₳` | `6,600k ₳` | `13,200k ₳` | `39,600k ₳` | `135,000k ₳` | `270,000k ₳` |
 
 ### Making Money
 
