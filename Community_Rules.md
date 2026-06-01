@@ -280,7 +280,7 @@ A character’s capacity to regenerate Light will influence how you decide the L
 - Regen `1` Light when Staggering or Taking Down an opponent. This can only be performed [`Rank+Prudence`] times per combat. This Light can also be given to an ally, acting as if they performed the Stagger or Takedown appropriately.
 - Regen `Character Rank` Light when finishing a combat
 - Regen `1` Light when Staggered
-- Regen `Character Rank` Light after an hour of rest
+- Regen [`Character Rank/2 rounded up`] Light after an hour of rest
 
 #### Creating Skills
 When creating a Skill, you need to follow the next steps:
