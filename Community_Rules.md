@@ -75,7 +75,7 @@ Character Rank determines Action Economy of the character by the following table
 | 0 | `1` | `0` |
 | 1 | `1` | `1` |
 | 2 | `1` | `2` |
-| 3 | `2` | `2` |
+| 3 | `2` | `2`  |
 | 4 | `2` | `3` |
 | 5 | `3` | `3` |
 | EX | `3` | `4` |
