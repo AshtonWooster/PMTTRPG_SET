@@ -75,7 +75,7 @@ Character Rank determines Action Economy of the character by the following table
 | 0 | `1` | `0` |
 | 1 | `1` | `1` |
 | 2 | `1` | `2` |
-| 3 | `2` | `2`  |
+| 3 | `2` | `2` |
 | 4 | `2` | `3` |
 | 5 | `3` | `3` |
 | EX | `3` | `4` |
@@ -720,17 +720,6 @@ Action Economy in this game is flexible, depending on Rank and even certain effe
   - All characters have Reactions determined by their Rank following the table below.
   - Characters can earn extra Reactions thanks to Outfit and Augment effects.
   - Characters can earn extra Reactions thanks to their equipment like sturdy, small or one-handed weapons.
-
-**Available Actions and Reactions to Rank**
-| Rank | Actions | Reactions |
-| ----------- | ----------- | ----------- |
-| 0 | `1` | `0` |
-| 1 | `1` | `1` |
-| 2 | `1` | `2` |
-| 3 | `2` | `3` |
-| 4 | `2` | `4` |
-| 5 | `3` | `5` |
-| EX | `3` | `6` |
 
 ***Action Economy Refreshing***
 At the start of a character’s turn, they recover all Actions, Reactions and Movement expended before that point. If something wasn’t expended, it isn’t recovered.
